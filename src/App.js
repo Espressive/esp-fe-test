@@ -1,16 +1,16 @@
 import React, {
   Component,
   Fragment,
-}               from 'react';
+}                    from 'react';
 import {
   Switch,
   Route,
-}               from 'react-router-dom';
-import {
-  Header,
-  Container,
-}               from 'semantic-ui-react';
-import MainMenu from './components/display/MainMenu';
+}                    from 'react-router-dom';
+import { Container } from 'semantic-ui-react';
+
+import MainMenu      from './components/display/MainMenu';
+import Formation     from './components/page/Formation';
+import TeamList      from './components/page/TeamList';
 
 class App extends Component {
 
@@ -25,17 +25,14 @@ class App extends Component {
         <Container style={{ paddingTop: '64px' }}>
           <Switch>
             <Route
+              component={Formation}
               exact
               path='/'
-            >
-              <Header content='Home' />
-            </Route>
+            />
             <Route
-              exact
+              component={TeamList}
               path='/team'
-            >
-              <Header content='Team' />
-            </Route>
+            />
           </Switch>
         </Container>
       </Fragment>

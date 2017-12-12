@@ -41,7 +41,7 @@ class MainMenu extends Component {
         />
         <Menu.Item
           as={NavLink}
-          content='Team'
+          content='Team List'
           to='/team'
         />
       </Menu>
