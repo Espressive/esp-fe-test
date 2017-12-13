@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes            from 'prop-types';
 import {
   Button,
   Card,
   Dimmer,
   Modal,
-} from 'semantic-ui-react';
+}                           from 'semantic-ui-react';
 
-import PlayerSelectModal from '../PlayerSelectModal';
+import PlayerSelectModal    from '../PlayerSelectModal';
 
-const propTypes = {};
+const propTypes = { className: PropTypes.string };
 
-const defaultProps = {};
+const defaultProps = { className: null };
 
 class RowButton extends Component {
 
@@ -36,20 +36,25 @@ class RowButton extends Component {
   }
 
   render() {
+    const { className } = this.props;
+
     const { dimmerActive } = this.state;
 
     return (
       <Dimmer.Dimmable
         as={Card}
         blurring
+        className={className}
         dimmed={dimmerActive}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
         style={{
-          borderColor : '#ccc',
-          borderStyle : 'dashed',
-          borderWidth : '1px',
-          boxShadow   : 'none',
+          borderColor     : '#ccc',
+          borderStyle     : 'dashed',
+          borderWidth     : '1px',
+          minHeight       : '266px',
+          backgroundColor : '#fdfdfd',
+          boxShadow       : 'inset 0 .125em .25em #f0f0f0',
         }}
         tabIndex={0}
       >

@@ -3,19 +3,24 @@ import PropTypes            from 'prop-types';
 import {
   Card,
   Grid,
+  Transition,
 }                           from 'semantic-ui-react';
-import uniqueId             from 'lodash.uniqueid';
+import _                    from 'lodash';
 
 import RowPlayer            from './RowPlayer';
 import RowButton            from './RowButton';
+import Position             from '../../../globals/constants/Position';
+
 
 const propTypes = {
   players: PropTypes.arrayOf(
     PropTypes.number
-  ),
+  ).isRequired,
+  position   : PropTypes.oneOf(Position).isRequired,
+  maxPlayers : PropTypes.number,
 };
 
-const defaultProps = { players: null };
+const defaultProps = { maxPlayers: 1 };
 
 class FormationRowPlayers extends Component {
 
@@ -24,30 +29,40 @@ class FormationRowPlayers extends Component {
   }
 
   render() {
-    const { players } = this.props;
+    const {
+      maxPlayers,
+      players,
+      position,
+    } = this.props;
 
     return (
       <Grid.Row>
         <Grid.Column>
           {players &&
-            <Card.Group
+            <Transition.Group
+              animation='scale'
+              as={Card.Group}
               className='centered'
-              itemsPerRow={6}
+              duration={200}
+              itemsPerRow={5}
             >
-              {players.map((player,i) =>
-                player ?
+              {_.times(maxPlayers, (i) =>
+                players[i] ?
                   <RowPlayer
                     country={'gb wls'}
                     firstName={'Aaron'}
-                    id={player}
-                    key={player}
+                    id={players[i]}
+                    key={i}
                     lastName={'Ramsey'}
                     position={'FWD'}
                   />
                   :
-                  <RowButton key={uniqueId()} />
+                  <RowButton
+                    key={i}
+                    position={position}
+                  />
               )}
-            </Card.Group>
+            </Transition.Group>
           }
 
         </Grid.Column>

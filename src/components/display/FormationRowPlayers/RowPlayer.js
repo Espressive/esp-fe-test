@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import PropTypes            from 'prop-types';
 import {
   Button,
-  Dimmer,
-  Image,
-  Flag,
   Card,
+  Dimmer,
+  Flag,
+  Icon,
+  Image,
   Label,
-} from 'semantic-ui-react';
+}                           from 'semantic-ui-react';
 
-import defaultImg from '../../../image.png';
-import Position from '../../../globals/constants/Position';
-
+import defaultImg           from '../../../image.png';
+import Position             from '../../../globals/constants/Position';
 
 const propTypes = {
   country   : PropTypes.string.isRequired,
@@ -19,10 +19,14 @@ const propTypes = {
   id        : PropTypes.number.isRequired,
   lastName  : PropTypes.string.isRequired,
   position  : PropTypes.oneOf(Position).isRequired,
+  className : PropTypes.string,
   img       : PropTypes.string,
 };
 
-const defaultProps = { img: null };
+const defaultProps = {
+  img       : null,
+  className : null,
+};
 
 class RowPlayer extends Component {
 
@@ -48,6 +52,7 @@ class RowPlayer extends Component {
 
   render() {
     const {
+      className,
       country,
       firstName,
       id,
@@ -60,13 +65,13 @@ class RowPlayer extends Component {
 
     return (
       <Card
+        className={className}
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
       >
         <Dimmer.Dimmable
           blurring
           dimmed={dimmerActive}
-          tabIndex={0}
         >
           <Dimmer active={dimmerActive}>
             <Button
@@ -99,10 +104,13 @@ class RowPlayer extends Component {
               content={id}
               style={{ float: 'right' }}
             />
-            <Label
-              basic
-              content={position}
-            />
+            <Label color='teal'>
+              <Icon
+                className='user'
+                style={{ marginRight: '.5em' }}
+              />
+              {position}
+            </Label>
           </Card.Meta>
         </Card.Content>
       </Card>
