@@ -1,22 +1,13 @@
 {
-  "comments": [
-    {
-      "body": "some comment",
-      "id": 1,
-      "postId": 1
-    }
+  "formations": [
+    "4-4-2",
+    "4-3-3",
+    "4-5-1",
+    "5-3-2",
+    "3-4-3",
+    "3-5-2"
   ],
-  "posts": [
-    {
-      "author": "typicode",
-      "id": 1,
-      "title": "json-server"
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  },
-  "team": [
+  "players": [
     {
       "country": "gb eng",
       "first_name": "Jack",
@@ -209,5 +200,27 @@
       "last_name": "Welbeck",
       "position": "FWD"
     }
-  ]
+  ],
+  "team_selection": {
+    "defenders": [
+      18,
+      6,
+      null,
+      24
+    ],
+    "forwards": [
+      null,
+      9,
+      24
+    ],
+    "keeper": [
+      33
+    ],
+    "midfielders": [
+      11,
+      null,
+      null,
+      19
+    ]
+  }
 }
