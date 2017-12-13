@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
-// import PropTypes from 'prop-types';
+// import PropTypes                   from 'prop-types';
 import {
   Button,
   Flag,
   Modal,
   List,
   Icon,
-} from 'semantic-ui-react';
+}                                     from 'semantic-ui-react';
 
 const propTypes = {};
 

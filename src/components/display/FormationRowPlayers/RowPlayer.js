@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes            from 'prop-types';
+import { Link }             from 'react-router-dom';
 import {
   Button,
   Card,
@@ -86,7 +87,10 @@ class RowPlayer extends Component {
           />
         </Dimmer.Dimmable>
         <Card.Content>
-          <Card.Header>
+          <Card.Header
+            as={Link}
+            to={'/players/' + id}
+          >
             <Flag
               className={country}
               style={{

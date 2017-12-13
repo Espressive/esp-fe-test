@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink }          from 'react-router-dom';
 import {
   Menu,
   Header,
-} from 'semantic-ui-react';
-import logo                                                from '../../../field.svg';
+}                           from 'semantic-ui-react';
+import logo                 from '../../../field.svg';
 
 class MainMenu extends Component {
 
@@ -41,8 +41,8 @@ class MainMenu extends Component {
         />
         <Menu.Item
           as={NavLink}
-          content='Team List'
-          to='/team'
+          content='Players'
+          to='/players'
         />
       </Menu>
     );

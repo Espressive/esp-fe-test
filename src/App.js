@@ -10,7 +10,7 @@ import { Container } from 'semantic-ui-react';
 
 import MainMenu      from './components/display/MainMenu';
 import Formation     from './components/page/Formation';
-import TeamList      from './components/page/TeamList';
+import Players       from './components/page/Players';
 
 class App extends Component {
 
@@ -30,8 +30,8 @@ class App extends Component {
               path='/'
             />
             <Route
-              component={TeamList}
-              path='/team'
+              component={Players}
+              path='/players'
             />
           </Switch>
         </Container>
