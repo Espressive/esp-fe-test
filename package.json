@@ -1,0 +1,35 @@
+{
+  "name": "esp-fe-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "16.2.0",
+    "react-dom": "16.2.0"
+  },
+  "devDependencies": {
+    "concurrently": "3.5.1",
+    "eslint-plugin-react": "7.5.1",
+    "json-server": "0.12.1",
+    "lodash": "4.17.4",
+    "react-router": "4.2.0",
+    "react-router-dom": "4.2.2",
+    "react-scripts": "1.0.17",
+    "redux": "3.7.2",
+    "redux-thunk": "2.2.0",
+    "semantic-ui-css": "2.2.12",
+    "semantic-ui-react": "0.77.0"
+  },
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:4001"
+    }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "data": "json-server -p 4001 -w ./data/db.json -r ./data/routes.json -d 800",
+    "develop": "yarn concurrently \"yarn data\" \"yarn start\""
+  }
+}

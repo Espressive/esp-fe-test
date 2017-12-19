@@ -1,0 +1,226 @@
+{
+  "formations": [
+    "4-4-2",
+    "4-3-3",
+    "4-5-1",
+    "5-3-2",
+    "3-4-3",
+    "3-5-2"
+  ],
+  "players": [
+    {
+      "country": "gb eng",
+      "first_name": "Jack",
+      "id": 10,
+      "img": "img/team/10.png",
+      "last_name": "Wilshere",
+      "position": "MID"
+    },
+    {
+      "country": "gb wls",
+      "first_name": "Aaron",
+      "id": 8,
+      "img": "img/team/8.png",
+      "last_name": "Ramsey",
+      "position": "MID"
+    },
+    {
+      "country": "co",
+      "first_name": "David",
+      "id": 13,
+      "img": "img/team/13.png",
+      "last_name": "Ospina",
+      "position": "GOL"
+    },
+    {
+      "country": "cr",
+      "first_name": "Petr",
+      "id": 33,
+      "img": "img/team/33.png",
+      "last_name": "Cech",
+      "position": "GOL"
+    },
+    {
+      "country": "fr",
+      "first_name": "Mathieu",
+      "id": 2,
+      "img": "img/team/2.png",
+      "last_name": "Debuchy",
+      "position": "DEF"
+    },
+    {
+      "country": "de",
+      "first_name": "Per",
+      "id": 4,
+      "img": "img/team/4.png",
+      "last_name": "Mertesacker",
+      "position": "DEF"
+    },
+    {
+      "country": "fr",
+      "first_name": "Laurent",
+      "id": 6,
+      "img": "img/team/6.png",
+      "last_name": "Koscielny",
+      "position": "DEF"
+    },
+    {
+      "country": "gb eng",
+      "first_name": "Rob",
+      "id": 16,
+      "img": "img/team/16.png",
+      "last_name": "Holding",
+      "position": "DEF"
+    },
+    {
+      "country": "es",
+      "first_name": "Nacho",
+      "id": 18,
+      "img": "img/team/18.png",
+      "last_name": "Monreal",
+      "position": "DEF"
+    },
+    {
+      "country": "de",
+      "first_name": "Shkodran",
+      "id": 20,
+      "img": "img/team/20.png",
+      "last_name": "Mustafi",
+      "position": "DEF"
+    },
+    {
+      "country": "gb eng",
+      "first_name": "Calum",
+      "id": 21,
+      "img": "img/team/21.png",
+      "last_name": "Chambers",
+      "position": "DEF"
+    },
+    {
+      "country": "es",
+      "first_name": "Hector",
+      "id": 24,
+      "img": "img/team/24.png",
+      "last_name": "Bellerin",
+      "position": "DEF"
+    },
+    {
+      "country": "ba",
+      "first_name": "Sead",
+      "id": 31,
+      "img": "img/team/31.png",
+      "last_name": "Kolasinac",
+      "position": "DEF"
+    },
+    {
+      "country": "de",
+      "first_name": "Mesut",
+      "id": 11,
+      "img": "img/team/11.png",
+      "last_name": "Ozil",
+      "position": "MID"
+    },
+    {
+      "country": "es",
+      "first_name": "Santi",
+      "id": 19,
+      "img": "img/team/19.png",
+      "last_name": "Cazorla",
+      "position": "MID"
+    },
+    {
+      "country": "ch",
+      "first_name": "Granit",
+      "id": 29,
+      "img": "img/team/29.png",
+      "last_name": "Xhaka",
+      "position": "MID"
+    },
+    {
+      "country": "fr",
+      "first_name": "Francis",
+      "id": 34,
+      "img": "img/team/34.png",
+      "last_name": "Coquelin",
+      "position": "MID"
+    },
+    {
+      "country": "eg",
+      "first_name": "Mohamed",
+      "id": 35,
+      "img": "img/team/35.png",
+      "last_name": "Elneny",
+      "position": "MID"
+    },
+    {
+      "country": "cl",
+      "first_name": "Alexis",
+      "id": 7,
+      "img": "img/team/7.png",
+      "last_name": "Sanchez",
+      "position": "FWD"
+    },
+    {
+      "country": "fr",
+      "first_name": "Alexandre",
+      "id": 9,
+      "img": "img/team/9.png",
+      "last_name": "Lacazette",
+      "position": "FWD"
+    },
+    {
+      "country": "fr",
+      "first_name": "Olivier",
+      "id": 12,
+      "img": "img/team/12.png",
+      "last_name": "Giroud",
+      "position": "FWD"
+    },
+    {
+      "country": "gb eng",
+      "first_name": "Theo",
+      "id": 14,
+      "img": "img/team/14.png",
+      "last_name": "Walcott",
+      "position": "FWD"
+    },
+    {
+      "country": "ng",
+      "first_name": "Alex",
+      "id": 17,
+      "img": "img/team/17.png",
+      "last_name": "Iwobi",
+      "position": "FWD"
+    },
+    {
+      "country": "ng",
+      "first_name": "Danny",
+      "id": 23,
+      "img": "img/team/23.png",
+      "last_name": "Welbeck",
+      "position": "FWD"
+    }
+  ],
+  "team_selection": {
+    "defenders": [
+      18,
+      6,
+      null,
+      24
+    ],
+    "forwards": [
+      null,
+      9,
+      24
+    ],
+    "keeper": [
+      33
+    ],
+    "midfielders": [
+      11,
+      null,
+      null,
+      19
+    ]
+  }
+}
