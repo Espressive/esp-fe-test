@@ -7,10 +7,12 @@ import PropTypes from 'prop-types';
 import { connect }            from 'react-redux';
 import {
   Button,
+  Dimmer,
   Flag,
-  Modal,
-  List,
   Icon,
+  List,
+  Loader,
+  Modal,
 }                from 'semantic-ui-react';
 
 import appThunks from '../../../actions/appThunks';
@@ -97,7 +99,19 @@ class PlayerSelectModal extends Component {
                 />
               ))
               :
-              <p>{'Loading'}</p>
+              <div
+                style={{
+                  position  : 'relative',
+                  minHeight : '300px',
+                }}
+              >
+                <Dimmer
+                  active
+                  inverted
+                >
+                  <Loader inverted>{'Loading'}</Loader>
+                </Dimmer>
+              </div>
             }
           </List>
         </Modal.Content>
