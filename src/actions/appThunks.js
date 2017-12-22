@@ -16,6 +16,20 @@ const appThunks = {
         // err.message, err.response
       });
   },
+
+  loadPlayers: () => (dispatch) => {
+    request
+      .get(`${API_ENDPOINT}/api/v1/players`)
+      .then(function (res) {
+        dispatch({
+          type       : 'ADD_PLAYERS',
+          formations : res.body,
+        });
+      })
+      .catch(function(err) {
+        // err.message, err.response
+      });
+  },
 };
 
 

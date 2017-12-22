@@ -2,10 +2,13 @@ const formations = (state = [], action) => {
   switch (action.type) {
 
     case 'ADD_FORMATIONS': {
-      const newState = [
-        ...state,
-        ...action.formations,
-      ];
+      // We don't want to merge states yet
+      // const newState = [
+      //   ...state,
+      //   ...action.formations,
+      // ];
+
+      const newState = [...action.formations];
       return newState;
     }
 
