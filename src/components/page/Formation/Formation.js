@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect }            from 'react-redux';
+
 import {
   Grid,
   Header,
@@ -115,4 +117,13 @@ class Formation extends Component {
 
 }
 
-export default Formation;
+const mapDispatchToProps = (dispatch) => ({
+  loadFormations: () => {
+    dispatch;
+  },
+});
+
+const mapStateToProps = (state) => ({ formations: state.formations });
+
+export default connect(mapStateToProps, mapDispatchToProps)(Formation);
+
