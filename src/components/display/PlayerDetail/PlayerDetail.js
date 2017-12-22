@@ -85,7 +85,6 @@ class PlayerDetail extends Component {
           />
 
           <Form
-            as='div'
             inverted
           >
             <Form.Group widths='equal'>
@@ -113,6 +112,13 @@ class PlayerDetail extends Component {
             </Form.Group>
           </Form>
           <p>{player.bio}</p>
+
+          {/*
+            TODO: This button needs to toggle an edit state for the player. this
+            will reveal a dropdown with available posiitons. This position can
+            be changed in the dropdown and then the save button below can be
+            used to save the changes.
+          */}
           {isEditing ?
             <Button
               content='SAVE'
