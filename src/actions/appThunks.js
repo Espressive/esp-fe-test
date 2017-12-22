@@ -22,8 +22,8 @@ const appThunks = {
       .get(`${API_ENDPOINT}/api/v1/players`)
       .then(function (res) {
         dispatch({
-          type       : 'ADD_PLAYERS',
-          formations : res.body,
+          type    : 'ADD_PLAYERS',
+          players : res.body,
         });
       })
       .catch(function(err) {
