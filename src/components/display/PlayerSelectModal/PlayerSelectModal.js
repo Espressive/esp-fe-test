@@ -1,16 +1,26 @@
-import React, { Component, Fragment } from 'react';
-// import PropTypes                   from 'prop-types';
+import React,
+{
+  Component,
+  Fragment,
+}                from 'react';
+import PropTypes from 'prop-types';
+import { connect }            from 'react-redux';
 import {
   Button,
   Flag,
   Modal,
   List,
   Icon,
-}                                     from 'semantic-ui-react';
+}                from 'semantic-ui-react';
 
-const propTypes = {};
+import appThunks from '../../../actions/appThunks';
 
-const defaultProps = {};
+
+const propTypes = {
+  loadPlayers : PropTypes.func.isRequired,
+  players     : PropTypes.array,
+};
+const defaultProps = { players: [] };
 
 class PlayerSelectModal extends Component {
 
@@ -19,6 +29,10 @@ class PlayerSelectModal extends Component {
     this.state = { selectedPlayer: null };
 
     this.handleSelect = this.handleSelect.bind(this);
+  }
+
+  componentWillMount() {
+    this.props.loadPlayers();
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -30,66 +44,9 @@ class PlayerSelectModal extends Component {
   }
 
   render() {
-    const players = [
-      {
-        country   : 'gb eng',
-        firstName : 'Jack',
-        id        : 10,
-        img       : 'img/team/10.png',
-        lastName  : 'Wilshere',
-        position  : 'MID',
-      },
-      {
-        country   : 'gb eng',
-        firstName : 'Jack',
-        id        : 11,
-        img       : 'img/team/10.png',
-        lastName  : 'Wilshere',
-        position  : 'MID',
-      },
-      {
-        country   : 'gb eng',
-        firstName : 'Jack',
-        id        : 12,
-        img       : 'img/team/10.png',
-        lastName  : 'Wilshere',
-        position  : 'MID',
-      },
-      {
-        country   : 'gb eng',
-        firstName : 'Jack',
-        id        : 13,
-        img       : 'img/team/10.png',
-        lastName  : 'Wilshere',
-        position  : 'MID',
-      },
-      {
-        country   : 'gb eng',
-        firstName : 'Jack',
-        id        : 14,
-        img       : 'img/team/10.png',
-        lastName  : 'Wilshere',
-        position  : 'MID',
-      },
-      {
-        country   : 'gb eng',
-        firstName : 'Jack',
-        id        : 15,
-        img       : 'img/team/10.png',
-        lastName  : 'Wilshere',
-        position  : 'MID',
-      },
-      {
-        country   : 'gb eng',
-        firstName : 'Jack',
-        id        : 16,
-        img       : 'img/team/10.png',
-        lastName  : 'Wilshere',
-        position  : 'MID',
-      },
-    ];
-
     const { selectedPlayer } = this.state;
+
+    const { players } = this.props;
 
     return (
       <Fragment>
@@ -127,7 +84,7 @@ class PlayerSelectModal extends Component {
                     }
                   </Fragment>
                 }
-                header={player.firstName + ' ' + player.lastName}
+                header={player.first_name + ' ' + player.last_name}
                 id={player.id}
                 image={{
                   avatar : true,
@@ -156,4 +113,13 @@ PlayerSelectModal.propTypes = propTypes;
 
 PlayerSelectModal.defaultProps = defaultProps;
 
-export default PlayerSelectModal;
+const mapDispatchToProps = (dispatch) => ({
+  loadPlayers: () => {
+    dispatch(appThunks.loadPlayers());
+  },
+});
+
+const mapStateToProps = (state) => ({ players: state.players });
+
+export default connect(mapStateToProps, mapDispatchToProps)(PlayerSelectModal);
+
