@@ -60,15 +60,16 @@ class PlayerSelectModal extends Component {
             relaxed
             selection
           >
-            {players.map((player) => (
-              <List.Item
-                active={selectedPlayer === player.id}
-                as='a'
-                content={player.position}
-                description={
-                  <Fragment>
-                    <Flag className={player.country} />
-                    {selectedPlayer === player.id &&
+            {players ?
+              players.map((player) => (
+                <List.Item
+                  active={selectedPlayer === player.id}
+                  as='a'
+                  content={player.position}
+                  description={
+                    <Fragment>
+                      <Flag className={player.country} />
+                      {selectedPlayer === player.id &&
                       <Icon
                         className='check'
                         color='green'
@@ -81,20 +82,23 @@ class PlayerSelectModal extends Component {
                           transform : 'translateY(-50%)',
                         }}
                       />
-                    }
-                  </Fragment>
-                }
-                header={player.first_name + ' ' + player.last_name}
-                id={player.id}
-                image={{
-                  avatar : true,
-                  src    : player.img,
-                }}
-                key={player.id}
-                onClick={this.handleSelect}
-                style={{ position: 'relative' }}
-              />
-            ))}
+                      }
+                    </Fragment>
+                  }
+                  header={player.first_name + ' ' + player.last_name}
+                  id={player.id}
+                  image={{
+                    avatar : true,
+                    src    : player.img,
+                  }}
+                  key={player.id}
+                  onClick={this.handleSelect}
+                  style={{ position: 'relative' }}
+                />
+              ))
+              :
+              <p>{'Loading'}</p>
+            }
           </List>
         </Modal.Content>
         <Modal.Actions>

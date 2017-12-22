@@ -1,4 +1,4 @@
-const players = (state = [], action) => {
+const players = (state = null, action) => {
   switch (action.type) {
 
     case 'ADD_PLAYERS':
