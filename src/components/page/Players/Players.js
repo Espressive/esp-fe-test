@@ -28,7 +28,7 @@ class Players extends Component {
         <Grid.Row>
           <Route
             component={PlayerList}
-            path='/players'
+            path='/players/:playerID?'
           />
           <Route
             component={PlayerDetail}
