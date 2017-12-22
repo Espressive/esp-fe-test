@@ -9,8 +9,12 @@ import {
 }                             from 'semantic-ui-react';
 import FormationRowPlayers    from '../../display/FormationRowPlayers';
 import Position               from '../../../globals/constants/Position';
+import appThunks              from '../../../actions/appThunks';
 
-const propTypes = { formations: PropTypes.array };
+const propTypes = {
+  loadFormations : PropTypes.func.isRequired,
+  formations     : PropTypes.array,
+};
 const defaultProps = { formations: [] };
 
 class Formation extends Component {
@@ -20,6 +24,10 @@ class Formation extends Component {
     this.state = { formation: '4-4-2' };
 
     this.handleFormationSet = this.handleFormationSet.bind(this);
+  }
+
+  componentWillMount() {
+    this.props.loadFormations();
   }
 
   shouldComponentUpdate(nextProps, nextState) {
@@ -33,6 +41,12 @@ class Formation extends Component {
 
   render() {
     const { formations } = this.props;
+
+    const formationsOptions = formations.map((f) => ({
+      key   : f,
+      text  : f,
+      value : f,
+    })); // Semantic Ui Dropdown requires options formatted with these three values
 
     const forwards = [null, 9, 24];
     const midfielders = [11,null,null,19];
@@ -57,7 +71,7 @@ class Formation extends Component {
           >
             <Dropdown
               onChange={this.handleFormationSet}
-              options={formations}
+              options={formationsOptions}
               text={formation}
               value={formation}
             />
@@ -93,7 +107,7 @@ Formation.defaultProps = defaultProps;
 
 const mapDispatchToProps = (dispatch) => ({
   loadFormations: () => {
-    dispatch;
+    dispatch(appThunks.loadFormations());
   },
 });
 
