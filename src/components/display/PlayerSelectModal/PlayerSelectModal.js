@@ -87,7 +87,7 @@ class PlayerSelectModal extends Component {
                       }
                     </Fragment>
                   }
-                  header={player.first_name + ' ' + player.last_name}
+                  header={[player.first_name,player.last_name].join(' ')}
                   id={player.id}
                   image={{
                     avatar : true,
