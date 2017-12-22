@@ -6,6 +6,7 @@ import React,
 import PropTypes from 'prop-types';
 import { connect }            from 'react-redux';
 import {
+  Segment,
   Button,
   Dimmer,
   Flag,
@@ -99,11 +100,12 @@ class PlayerSelectModal extends Component {
                 />
               ))
               :
-              <div
-                style={{
-                  position  : 'relative',
-                  minHeight : '300px',
-                }}
+              // TODO: This markup used to show the user a loading state while
+              // they wait for Redux state to populate. It can be moved to a new
+              // component for reusability.
+              <Segment
+                basic
+                style={{ minHeight: '300px' }}
               >
                 <Dimmer
                   active
@@ -111,7 +113,7 @@ class PlayerSelectModal extends Component {
                 >
                   <Loader inverted>{'Loading'}</Loader>
                 </Dimmer>
-              </div>
+              </Segment>
             }
           </List>
         </Modal.Content>
