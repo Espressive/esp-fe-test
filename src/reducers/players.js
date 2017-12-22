@@ -2,10 +2,7 @@ const players = (state = [], action) => {
   switch (action.type) {
 
     case 'ADD_PLAYERS':
-      return [
-        ...state,
-        ...action.players,
-      ];
+      return [...action.players];
     default:
       return state;
 
