@@ -36,7 +36,6 @@ class Formation extends Component {
 
   handleFormationSet(e,data) {
     this.setState({ formation: data.value });
-    // console.warn(data.value);
   }
 
   render() {
