@@ -17,16 +17,17 @@ Thank you for your interest in joining Espressive! We wanted to make our technic
 
 ## Folder Structure
 
-After creation, your project should look like this:
+After cloning the repository, your file structure should look like this:
 
 ```
-my-app/
-  README.md
+esp-fe-test/
+  data/
   node_modules/
-  package.json
   public/
+    img/
     index.html
     favicon.ico
+    manifest.json
   src/
     App.css
     App.js
@@ -34,23 +35,22 @@ my-app/
     index.css
     index.js
     logo.svg
+  .eslintrc
+  .gitignore
+  package.json
+  yarn.lock
+  README.md
 ```
 
-For the project to build, **these files must exist with exact filenames**:
+#### `data`
+Leave this folder alone it holds database files for the API. You do not need to open it or edit them.
 
-* `public/index.html` is the page template;
-* `src/index.js` is the JavaScript entry point.
+#### `public`
+You do not need to edit any of these files. These are served when your development environment starts.
 
-You can delete or rename the other files.
+#### `public`
+This is the folder you will be working in. [Webpack](https://webpack.js.org/) compiles all of these files and creates the application.
 
-You may create subdirectories inside `src`. For faster rebuilds, only files inside `src` are processed by Webpack.<br>
-You need to **put any JS and CSS files inside `src`**, otherwise Webpack won’t see them.
-
-Only files inside `public` can be used from `public/index.html`.<br>
-Read instructions below for using assets from JavaScript and HTML.
-
-You can, however, create more top-level directories.<br>
-They will not be included in the production build so you can use them for things like documentation.
 
 ## Available Scripts
 
