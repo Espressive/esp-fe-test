@@ -14,6 +14,49 @@ Thank you for your interest in joining Espressive! We wanted to make our technic
 - [ ] Connect the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to the API to show data from the currently selected player based on the `playerID`
 - [ ] Update the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to allow editing the player position.
 
+## Get Started
+
+To get started on this test, please follow the following steps:
+1. [Fork of this repository](https://github.com/Espressive/esp-fe-test#fork-destination-box) to your Github account.
+
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `yarn dev`
+
+Runs both `yarn data` and `yarn start` to start the API and development servers. You should not need to run any of the other scripts below for this test.
+
+### `yarn start`
+
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
+
+### `yarn data`
+
+Runs the test API and serves the API endpoints and application data. You should not need to modify this script. This API is run with [`json-server`](https://github.com/typicode/json-server).
+
+The routes and a proxy have been set up so you do not need to make API calls on a different port.
+
+### `yarn test`
+
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](#running-tests) for more information.
+
+### `yarn run build`
+
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
+
+See the section about [deployment](#deployment) for more information.
+
 
 ## Folder Structure
 
@@ -51,30 +94,3 @@ You do not need to edit any of these files. These are served when your developme
 #### `public`
 This is the folder you will be working in. [Webpack](https://webpack.js.org/) compiles all of these files and creates the application.
 
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](#running-tests) for more information.
-
-### `yarn run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](#deployment) for more information.
