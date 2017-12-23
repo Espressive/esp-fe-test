@@ -82,21 +82,25 @@ class Formation extends Component {
               />
             </Grid.Column>
           </Grid.Row>
+          {/* NOTE: This is the FWD row */}
           <FormationRowPlayers
             maxPlayers={rows[2]}
             players={forwards}
             position={Position[0]}
           />
+          {/* NOTE: This is the MID row */}
           <FormationRowPlayers
             maxPlayers={rows[1]}
             players={midfielders}
             position={Position[1]}
           />
+          {/* NOTE: This is the DEF row */}
           <FormationRowPlayers
             maxPlayers={rows[0]}
             players={defenders}
             position={Position[2]}
           />
+          {/* NOTE: This is the GOL row */}
           <FormationRowPlayers
             players={keeper}
             position={Position[3]}
