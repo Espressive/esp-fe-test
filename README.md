@@ -12,7 +12,7 @@ Thank you for your interest in joining Espressive! We wanted to make our technic
 - [ ] Set up the `Formation` component to allow removing and adding players to the `team_selection` with a `POST` of these changes to the `/api/v1/team_selection` API endpoint.
 - [ ] Update the `PlayerSelectModal` to only assign players to a row based on position.
 - [ ] Connect the `PlayerDetail` component to the API to show data from the currently selected player based on the `playerID`
-- [ ] Update the [`PlayerDetail`](PlayerDetail.js) component to allow editing the player position.
+- [ ] Update the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to allow editing the player position.
 
 
 ## Folder Structure
