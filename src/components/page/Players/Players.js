@@ -3,6 +3,7 @@ import { Route }            from 'react-router-dom';
 import {
   Grid,
   Header,
+  Transition,
 }                           from 'semantic-ui-react';
 
 import PlayerList           from '../../display/PlayerList';
@@ -16,26 +17,32 @@ class Players extends Component {
 
   render() {
     return (
-      <Grid
-        data-component='Players'
-        padded
+      <Transition
+        animation='fade'
+        duration={300}
+        transitionOnMount
       >
-        <Grid.Row>
-          <Grid.Column>
-            <Header content='Players' />
-          </Grid.Column>
-        </Grid.Row>
-        <Grid.Row>
-          <Route
-            component={PlayerList}
-            path='/players/:playerID?'
-          />
-          <Route
-            component={PlayerDetail}
-            path='/players/:playerID'
-          />
-        </Grid.Row>
-      </Grid>
+        <Grid
+          data-component='Players'
+          padded
+        >
+          <Grid.Row>
+            <Grid.Column>
+              <Header content='Players' />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row>
+            <Route
+              component={PlayerList}
+              path='/players/:playerID?'
+            />
+            <Route
+              component={PlayerDetail}
+              path='/players/:playerID'
+            />
+          </Grid.Row>
+        </Grid>
+      </Transition>
     );
   }
 

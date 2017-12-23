@@ -6,6 +6,7 @@ import {
   Grid,
   Header,
   Dropdown,
+  Transition,
 }                             from 'semantic-ui-react';
 import FormationRowPlayers    from '../../display/FormationRowPlayers';
 import Position               from '../../../globals/constants/Position';
@@ -56,46 +57,52 @@ class Formation extends Component {
     const rows = formation.split('-').map(Number);
 
     return (
-      <Grid
-        data-component='Formation'
-        padded
+      <Transition
+        animation='fade'
+        duration={300}
+        transitionOnMount
       >
-        <Grid.Row>
-          <Grid.Column width={12}>
-            <Header content='Formation' />
-          </Grid.Column>
-          <Grid.Column
-            textAlign='right'
-            width={4}
-          >
-            <Dropdown
-              onChange={this.handleFormationSet}
-              options={formationsOptions}
-              text={formation}
-              value={formation}
-            />
-          </Grid.Column>
-        </Grid.Row>
-        <FormationRowPlayers
-          maxPlayers={rows[2]}
-          players={forwards}
-          position={Position[0]}
-        />
-        <FormationRowPlayers
-          maxPlayers={rows[1]}
-          players={midfielders}
-          position={Position[1]}
-        />
-        <FormationRowPlayers
-          maxPlayers={rows[0]}
-          players={defenders}
-          position={Position[2]}
-        />
-        <FormationRowPlayers
-          players={keeper}
-          position={Position[3]}
-        />
-      </Grid>
+        <Grid
+          data-component='Formation'
+          padded
+        >
+          <Grid.Row>
+            <Grid.Column width={12}>
+              <Header content='Formation' />
+            </Grid.Column>
+            <Grid.Column
+              textAlign='right'
+              width={4}
+            >
+              <Dropdown
+                onChange={this.handleFormationSet}
+                options={formationsOptions}
+                text={formation}
+                value={formation}
+              />
+            </Grid.Column>
+          </Grid.Row>
+          <FormationRowPlayers
+            maxPlayers={rows[2]}
+            players={forwards}
+            position={Position[0]}
+          />
+          <FormationRowPlayers
+            maxPlayers={rows[1]}
+            players={midfielders}
+            position={Position[1]}
+          />
+          <FormationRowPlayers
+            maxPlayers={rows[0]}
+            players={defenders}
+            position={Position[2]}
+          />
+          <FormationRowPlayers
+            players={keeper}
+            position={Position[3]}
+          />
+        </Grid>
+      </Transition>
     );
   }
 

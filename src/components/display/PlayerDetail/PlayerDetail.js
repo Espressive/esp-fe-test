@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes            from 'prop-types';
 import {
+  Transition,
   Button,
   Flag,
   Form,
@@ -54,85 +55,91 @@ class PlayerDetail extends Component {
     const { isEditing } = this.state;
 
     return (
-      <Grid.Column width={10}>
-        <Segment
-          clearing
-          color='teal'
-          inverted
-        >
-          <Image
-            floated='left'
-            size='medium'
-            src={player.img}
-            style={{ marginBottom: 0 }}
-            wrapped
-          />
-
-          <Header
-            as='h2'
-            content={[player.first_name,player.last_name].join(' ')}
-            style={{ marginTop: 0 }}
-            subheader={
-              <Label
-                circular
-                content={playerID}
-                style={{
-                  float     : 'right',
-                  marginTop : '.25em',
-                }}
-              />
-            }
-          />
-
-          <Form
+      <Transition
+        animation='fly up'
+        duration={600}
+        transitionOnMount
+      >
+        <Grid.Column width={10}>
+          <Segment
+            clearing
+            color='teal'
             inverted
           >
-            <Form.Group widths='equal'>
-              <Form.Field inline>
-                <label htmlFor='#'>{'Country'}</label>
-                <Flag
-                  className={player.country}
-                  style={{ margin: '1em 0' }}
-                />
-              </Form.Field>
-              {isEditing ?
-                <Form.Select
-                  compact
-                  inline
-                  label='Position'
-                  options={positions}
-                  value={player.position}
-                />
-                :
-                <Form.Field inline>
-                  <label htmlFor='#'>{'Position'}</label>
-                  <p style={{ margin: '1em 0' }}>{player.position}</p>
-                </Form.Field>
-              }
-            </Form.Group>
-          </Form>
-          <p>{player.bio}</p>
+            <Image
+              floated='left'
+              size='medium'
+              src={player.img}
+              style={{ marginBottom: 0 }}
+              wrapped
+            />
 
-          {/*
+            <Header
+              as='h2'
+              content={[player.first_name,player.last_name].join(' ')}
+              style={{ marginTop: 0 }}
+              subheader={
+                <Label
+                  circular
+                  content={playerID}
+                  style={{
+                    float     : 'right',
+                    marginTop : '.25em',
+                  }}
+                />
+              }
+            />
+
+            <Form
+              inverted
+            >
+              <Form.Group widths='equal'>
+                <Form.Field inline>
+                  <label htmlFor='#'>{'Country'}</label>
+                  <Flag
+                    className={player.country}
+                    style={{ margin: '1em 0' }}
+                  />
+                </Form.Field>
+                {isEditing ?
+                  <Form.Select
+                    compact
+                    inline
+                    label='Position'
+                    options={positions}
+                    value={player.position}
+                  />
+                  :
+                  <Form.Field inline>
+                    <label htmlFor='#'>{'Position'}</label>
+                    <p style={{ margin: '1em 0' }}>{player.position}</p>
+                  </Form.Field>
+                }
+              </Form.Group>
+            </Form>
+            <p>{player.bio}</p>
+
+            {/*
             TODO: This button needs to toggle an edit state for the player. this
             will reveal a dropdown with available posiitons. This position can
             be changed in the dropdown and then the save button below can be
             used to save the changes.
           */}
-          {isEditing ?
-            <Button
-              content='SAVE'
-              inverted
-              positive
-            />
-            :
-            <Button
-              content='Edit Player Position'
-              inverted
-            />
-          }
-        </Segment>
-      </Grid.Column>
+            {isEditing ?
+              <Button
+                content='SAVE'
+                inverted
+                positive
+              />
+              :
+              <Button
+                content='Edit Player Position'
+                inverted
+              />
+            }
+          </Segment>
+        </Grid.Column>
+      </Transition>
     );
   }
 
