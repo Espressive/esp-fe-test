@@ -105,7 +105,7 @@ In the project directory, you can run:
 
 ### `yarn dev`
 
-Runs both `yarn data` and `yarn start` to start the API and development servers. You should not need to run any of the other scripts below for this test.
+Runs `yarn data` and `yarn start` at the same time to start the API and development servers. *You should not need to run any of the other scripts below for this test.*
 
 ### `yarn start`
 
