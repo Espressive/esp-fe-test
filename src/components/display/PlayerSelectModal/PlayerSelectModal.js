@@ -2,9 +2,9 @@ import React,
 {
   Component,
   Fragment,
-}                from 'react';
-import PropTypes from 'prop-types';
-import { connect }            from 'react-redux';
+}                  from 'react';
+import PropTypes   from 'prop-types';
+import { connect } from 'react-redux';
 import {
   Segment,
   Button,
@@ -14,9 +14,9 @@ import {
   List,
   Loader,
   Modal,
-}                from 'semantic-ui-react';
+}                  from 'semantic-ui-react';
 
-import appThunks from '../../../actions/appThunks';
+import appThunks   from '../../../actions/appThunks';
 
 
 const propTypes = {

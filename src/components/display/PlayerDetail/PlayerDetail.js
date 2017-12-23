@@ -60,7 +60,7 @@ class PlayerDetail extends Component {
         duration={600}
         transitionOnMount
       >
-        <Grid.Column width={10}>
+        <Grid.Column width={11}>
           <Segment
             clearing
             color='teal'
