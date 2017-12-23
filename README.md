@@ -7,7 +7,7 @@ Thank you for your interest in joining Espressive! We wanted to make our technic
 
 ## Tasks
 
-[ ] Create a new `ListLoading` display component and replace the repeated loading state markup in the `PlayerList` and `PlayerSelectModal` components. 
+- [ ] Create a new `ListLoading` display component and replace the repeated loading state markup in the `PlayerList` and `PlayerSelectModal` components. 
 
 
 ## Folder Structure
