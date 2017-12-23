@@ -17,7 +17,72 @@ Thank you for your interest in joining Espressive! We wanted to make our technic
 ## Get Started
 
 To get started on this test, please follow the following steps:
-1. [Fork of this repository](#fork-destination-box) to your Github account.
+1. Fork of this repository to your Github account and then clone it to your local machine.
+2. If you do not already have it installed, download and install [`node`](https://nodejs.org/en/download/)
+3. If you do not already have it installed, install [`yarn`](https://yarnpkg.com/lang/en/docs/install/)
+4. In the project directory run `yarn dev`
+
+Once you run this step you will see the project open in your default browser.
+
+
+## API endpoints
+
+### `/api/v1/formations`
+
+These are the available team formations. Returns an array of strings.
+
+### `/api/v1/players`
+
+A list of all available players. Returns an array of objects.
+
+### `/api/v1/players/:id`
+
+Passing a player ID to the `players` endpoint will return you the information for that player.
+
+### `/api/v1/team_selection`
+
+The `team_selection` endpoint will return the currently selected team separated into four arrays:
+- `forwards`
+- `midfielders`
+- `defenders`
+- `keeper`
+
+
+## Folder Structure
+
+After cloning the repository, your file structure should look like this:
+
+```
+esp-fe-test/
+  data/
+  node_modules/
+  public/
+    img/
+    index.html
+    favicon.ico
+    manifest.json
+  src/
+    App.css
+    App.js
+    App.test.js
+    index.css
+    index.js
+    logo.svg
+  .eslintrc
+  .gitignore
+  package.json
+  yarn.lock
+  README.md
+```
+
+#### `data`
+Leave this folder alone it holds database files for the API. You do not need to open it or edit them.
+
+#### `public`
+You do not need to edit any of these files. These are served when your development environment starts.
+
+#### `public`
+This is the folder you will be working in. [Webpack](https://webpack.js.org/) compiles all of these files and creates the application.
 
 
 ## Available Scripts
@@ -57,40 +122,4 @@ Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
 
-
-## Folder Structure
-
-After cloning the repository, your file structure should look like this:
-
-```
-esp-fe-test/
-  data/
-  node_modules/
-  public/
-    img/
-    index.html
-    favicon.ico
-    manifest.json
-  src/
-    App.css
-    App.js
-    App.test.js
-    index.css
-    index.js
-    logo.svg
-  .eslintrc
-  .gitignore
-  package.json
-  yarn.lock
-  README.md
-```
-
-#### `data`
-Leave this folder alone it holds database files for the API. You do not need to open it or edit them.
-
-#### `public`
-You do not need to edit any of these files. These are served when your development environment starts.
-
-#### `public`
-This is the folder you will be working in. [Webpack](https://webpack.js.org/) compiles all of these files and creates the application.
 
