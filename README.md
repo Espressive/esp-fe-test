@@ -20,6 +20,9 @@ It will probably be helpful to you to read all of these instructions before you 
 - [ ] Connect the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to the API to show data from the currently selected player based on the `playerID`. You should always make the call to the API, to make sure you have loaded the latest available data for that player.
 - [ ] Update the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to allow editing the player position. Once changed, the player is elegible to be selected in such position.
 
+*Extra credit (not required):*
+- [ ] Add some unit tests.
+
 ## Get Started
 
 To get started on this test, please follow these steps:
