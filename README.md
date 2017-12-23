@@ -5,6 +5,8 @@ Frontend candidate technical interview project
 
 Thank you for your interest in joining Espressive! We wanted to make our technical interview fun so you will be turning this football team builder into a working application. There are a few tasks to be completed which are outlined below. Each of these are in the Tasks section at the top of the document so it is easier keep track of them and make sure you complete them all before submitting your fork.
 
+It will probably be helpful to you to read all of these instructions before you get started.
+
 ## Tasks
 
 - [ ] Create a new `ListLoading` display component and replace the repeated loading state markup in the [`PlayerList`](src/components/display/PlayerList/PlayerList.js) and [`PlayerSelectModal`](src/components/display/PlayerSelectModal/PlayerSelectModal.js) components.
