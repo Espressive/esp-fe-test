@@ -17,7 +17,7 @@ Thank you for your interest in joining Espressive! We wanted to make our technic
 ## Get Started
 
 To get started on this test, please follow the following steps:
-1. [Fork of this repository](https://github.com/Espressive/esp-fe-test#fork-destination-box) to your Github account.
+1. [Fork of this repository](#fork-destination-box) to your Github account.
 
 
 ## Available Scripts
