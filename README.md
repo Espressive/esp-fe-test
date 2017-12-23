@@ -22,7 +22,11 @@ To get started on this test, please follow these steps:
 3. If you do not already have it installed, install [`yarn`](https://yarnpkg.com/lang/en/docs/install/)
 4. In the project directory run `yarn dev`
 
-Once you run this step you will see the project open in your default browser.
+Once you run this step you will see the project open in your default browser!
+
+## Submitting Your Work
+
+Once you have completed all of the items in the [Tasks](#Tasks) section, commit and push all of your work to your fork and send us an email to let us know it is complete and you are ready for us to look at it.
 
 
 ## Tech Stack
