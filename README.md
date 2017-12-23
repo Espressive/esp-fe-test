@@ -16,13 +16,26 @@ Thank you for your interest in joining Espressive! We wanted to make our technic
 
 ## Get Started
 
-To get started on this test, please follow the following steps:
+To get started on this test, please follow these steps:
 1. Fork of this repository to your Github account and then clone it to your local machine.
 2. If you do not already have it installed, download and install [`node`](https://nodejs.org/en/download/)
 3. If you do not already have it installed, install [`yarn`](https://yarnpkg.com/lang/en/docs/install/)
 4. In the project directory run `yarn dev`
 
 Once you run this step you will see the project open in your default browser.
+
+
+## Tech Stack
+
+You may need to consult documentation on the following projects in order to complete this test:
+
+- [`react-router`](https://reacttraining.com/react-router/)
+- [`redux`](https://redux.js.org/)
+- [`redux-thunk`](https://github.com/gaearon/redux-thunk)
+- [`semantic-ui-react`](https://react.semantic-ui.com)
+- [`superagent`](http://visionmedia.github.io/superagent/)
+
+Additional packages are used in this project but are probably not something you'll need to reference. See the [`package.json`](package.json) file for more information on other packages used if needed.
 
 
 ## API endpoints
@@ -75,14 +88,15 @@ esp-fe-test/
   README.md
 ```
 
+#### `src`
+This is the folder you will be working in. [Webpack](https://webpack.js.org/) compiles all of these files and creates the application.
+
 #### `data`
 Leave this folder alone it holds database files for the API. You do not need to open it or edit them.
 
 #### `public`
 You do not need to edit any of these files. These are served when your development environment starts.
 
-#### `public`
-This is the folder you will be working in. [Webpack](https://webpack.js.org/) compiles all of these files and creates the application.
 
 
 ## Available Scripts
