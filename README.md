@@ -89,7 +89,7 @@ esp-fe-test/
 ```
 
 #### `src`
-This is the folder you will be working in. [Webpack](https://webpack.js.org/) compiles all of these files and creates the application.
+This is the folder you will be working in. *You should not need to touch files in any other folder for this test.* [Webpack](https://webpack.js.org/) compiles all of these files and creates the application.
 
 #### `data`
 Leave this folder alone it holds database files for the API. You do not need to open it or edit them.
