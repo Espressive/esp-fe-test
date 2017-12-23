@@ -7,11 +7,11 @@ Thank you for your interest in joining Espressive! We wanted to make our technic
 
 ## Tasks
 
-- [ ] Create a new `ListLoading` display component and replace the repeated loading state markup in the `PlayerList` and `PlayerSelectModal` components.
-- [ ] Connect the `Formation` component to display data from the `/api/v1/team_selection` API endpoint
-- [ ] Set up the `Formation` component to allow removing and adding players to the `team_selection` with a `POST` of these changes to the `/api/v1/team_selection` API endpoint.
-- [ ] Update the `PlayerSelectModal` to only assign players to a row based on position.
-- [ ] Connect the `PlayerDetail` component to the API to show data from the currently selected player based on the `playerID`
+- [ ] Create a new `ListLoading` display component and replace the repeated loading state markup in the [`PlayerList`](src/components/display/PlayerList/PlayerList.js) and [`PlayerSelectModal`](src/components/display/PlayerSelectModal/PlayerSelectModal.js) components.
+- [ ] Connect the [`Formation`](src/components/page/Formation/Formation.js) component to display data from the `/api/v1/team_selection` API endpoint
+- [ ] Set up the [`Formation`](src/components/page/Formation/Formation.js) component to allow removing and adding players to the `team_selection` with a `POST` of these changes to the `/api/v1/team_selection` API endpoint.
+- [ ] Update the [`PlayerSelectModal`](src/components/display/PlayerSelectModal/PlayerSelectModal.js) to only assign players to a row based on position.
+- [ ] Connect the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to the API to show data from the currently selected player based on the `playerID`
 - [ ] Update the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to allow editing the player position.
 
 
