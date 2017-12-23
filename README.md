@@ -3,18 +3,22 @@ Frontend candidate technical interview project
 
 ## Introduction
 
-Thank you for your interest in joining Espressive! We wanted to make our technical interview fun so you will be turning this football team builder into a working application. There are a few tasks to be completed which are outlined below. Each of these are in the Tasks section at the top of the document so it is easier keep track of them and make sure you complete them all before submitting your fork.
+Thank you for your interest in joining Espressive! We wanted to make our technical interview fun so you will be turning this football team builder into a working application. 
+
+We're prodiving you with a head start with this web app that already includes most of the UI components that you'll need, as well as the basic structure of a redux application. 
+
+Your job is to complete this web app with the tasks outlined below. Each of these are in the Tasks section at the top of the document so it is easier keep track of them and make sure you complete them all before submitting your fork.
 
 It will probably be helpful to you to read all of these instructions before you get started.
 
 ## Tasks
 
-- [ ] Create a new `ListLoading` display component and replace the repeated loading state markup in the [`PlayerList`](src/components/display/PlayerList/PlayerList.js) and [`PlayerSelectModal`](src/components/display/PlayerSelectModal/PlayerSelectModal.js) components.
-- [ ] Connect the [`Formation`](src/components/page/Formation/Formation.js) component to display data from the `/api/v1/team_selection` API endpoint
-- [ ] Set up the [`Formation`](src/components/page/Formation/Formation.js) component to allow removing and adding players to the `team_selection` with a `POST` of these changes to the `/api/v1/team_selection` API endpoint.
-- [ ] Update the [`PlayerSelectModal`](src/components/display/PlayerSelectModal/PlayerSelectModal.js) to only assign players to a row based on position.
-- [ ] Connect the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to the API to show data from the currently selected player based on the `playerID`
-- [ ] Update the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to allow editing the player position.
+- [ ] Create a new component called `ListLoading`, which will replace the repeated loading state markup in the [`PlayerList`](src/components/display/PlayerList/PlayerList.js) and [`PlayerSelectModal`](src/components/display/PlayerSelectModal/PlayerSelectModal.js) components.
+- [ ] Connect the [`Formation`](src/components/page/Formation/Formation.js) component to load the initial data for the player numbers and their position from the `/api/v1/team_selection` API endpoint
+- [ ] Set up the [`Formation`](src/components/page/Formation/Formation.js) component to allow removing and adding players to the `team_selection` with a `POST` of these changes to the `/api/v1/team_selection` API endpoint. 
+- [ ] Update the [`PlayerSelectModal`](src/components/display/PlayerSelectModal/PlayerSelectModal.js) to only assign players to a row based on position. For each position only the number of players designated in the formation can be used. For instance, in a 4-4-2 formation, only 4 defenders should be allowed, along with 4 midfielders and 3 forwards. There's always 11 players in the team selection, so a player cannot play in two different positions.
+- [ ] Connect the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to the API to show data from the currently selected player based on the `playerID`. You should always make the call to the API, to make sure you have loaded the latest available data for that player.
+- [ ] Update the [`PlayerDetail`](src/components/display/PlayerDetail/PlayerDetail.js) component to allow editing the player position. Once changed, the player is elegible to be selected in such position.
 
 ## Get Started
 
