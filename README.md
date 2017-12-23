@@ -7,7 +7,7 @@ Thank you for your interest in joining Espressive! We wanted to make our technic
 
 We're prodiving you with a head start with this web app that already includes most of the UI components that you'll need, as well as the basic structure of a redux application. 
 
-Your job is to complete this web app with the tasks outlined below. Each of these are in the Tasks section at the top of the document so it is easier keep track of them and make sure you complete them all before submitting your fork.
+Your job is to complete this web app with the tasks outlined below. Each of these are in the Tasks section at the top of the document so it is easier keep track of them and make sure you complete them all before submitting your branch.
 
 It will probably be helpful to you to read all of these instructions before you get started.
 
@@ -26,7 +26,7 @@ It will probably be helpful to you to read all of these instructions before you 
 ## Get Started
 
 To get started on this test, please follow these steps:
-1. Fork of this repository to your Github account and then clone it to your local machine.
+1. Clone this repository to your local machine and then make your own working branch. *Please do not fork.*
 2. If you do not already have it installed, download and install [`node`](https://nodejs.org/en/download/)
 3. If you do not already have it installed, install [`yarn`](https://yarnpkg.com/lang/en/docs/install/)
 4. In the project directory run `yarn install`
@@ -36,7 +36,7 @@ Once you run this last step you will see the project open in your default browse
 
 ## Submitting Your Work
 
-Once you have completed all of the items in the [Tasks](#Tasks) section, commit and push all of your work to your fork and send us an email to let us know it is complete and you are ready for us to look at it.
+Once you have completed all of the items in the [Tasks](#Tasks) section, commit and push all of your work to your branch and send us an email to let us know it is complete and you are ready for us to look at it.
 
 
 ## Tech Stack
