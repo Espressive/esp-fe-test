@@ -26,9 +26,10 @@ To get started on this test, please follow these steps:
 1. Fork of this repository to your Github account and then clone it to your local machine.
 2. If you do not already have it installed, download and install [`node`](https://nodejs.org/en/download/)
 3. If you do not already have it installed, install [`yarn`](https://yarnpkg.com/lang/en/docs/install/)
-4. In the project directory run `yarn dev`
+4. In the project directory run `yarn install`
+5. Then run `yarn dev`
 
-Once you run this step you will see the project open in your default browser!
+Once you run this last step you will see the project open in your default browser!
 
 ## Submitting Your Work
 
