@@ -18,33 +18,24 @@ import {
 
 import appThunks   from '../../../actions/appThunks';
 
-
-const propTypes = {
-  loadPlayers : PropTypes.func.isRequired,
-  players     : PropTypes.array,
-};
-const defaultProps = { players: [] };
-
 class PlayerSelectModal extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { selectedPlayer: null };
+  static propTypes = {
+    loadPlayers : PropTypes.func.isRequired,
+    players     : PropTypes.array,
+  };
 
-    this.handleSelect = this.handleSelect.bind(this);
-  }
+  static defaultProps = { players: [] };
+
+  state = { selectedPlayer: null };
 
   componentDidMount() {
     this.props.loadPlayers();
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-  }
-
-  handleSelect(e,data) {
+  handleSelect = (e,data) => {
     this.setState({ selectedPlayer: data.id });
-  }
+  };
 
   render() {
     const { selectedPlayer } = this.state;
@@ -128,10 +119,6 @@ class PlayerSelectModal extends Component {
   }
 
 }
-
-PlayerSelectModal.propTypes = propTypes;
-
-PlayerSelectModal.defaultProps = defaultProps;
 
 const mapDispatchToProps = (dispatch) => ({
   loadPlayers: () => {

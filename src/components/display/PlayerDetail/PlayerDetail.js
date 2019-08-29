@@ -12,24 +12,22 @@ import {
   Segment,
 }                           from 'semantic-ui-react';
 
-const propTypes = { match: PropTypes.shape({ params: PropTypes.shape({ playerID: PropTypes.string }) }) };
-
-const defaultProps = { match: null };
 
 class PlayerDetail extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { isEditing: false };
-  }
+  static propTypes = { match: PropTypes.shape({ params: PropTypes.shape({ playerID: PropTypes.string }) }) };
+
+  static defaultProps = { match: null };
+
+  state = { isEditing: false };
 
   shouldComponentUpdate(nextProps, nextState) {
     return true;
   }
 
   render() {
-    // TODO: This temporary data needs to be removed and replaced with real
-    // player data from /api/v1/players/$playerID
+  // TODO: This temporary data needs to be removed and replaced with real
+  // player data from /api/v1/players/$playerID
     const player = {
       id         : 17,
       first_name : 'First',
@@ -144,9 +142,5 @@ class PlayerDetail extends Component {
   }
 
 }
-
-PlayerDetail.propTypes = propTypes;
-
-PlayerDetail.defaultProps = defaultProps;
 
 export default PlayerDetail;

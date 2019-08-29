@@ -1,19 +1,15 @@
-import React, { Component } from 'react';
-import { Route }            from 'react-router-dom';
+import React, { PureComponent } from 'react';
+import { Route }                from 'react-router-dom';
 import {
   Grid,
   Header,
   Transition,
-}                           from 'semantic-ui-react';
+}                               from 'semantic-ui-react';
 
-import PlayerList           from '../../display/PlayerList';
-import PlayerDetail         from '../../display/PlayerDetail';
+import PlayerList               from '../../display/PlayerList';
+import PlayerDetail             from '../../display/PlayerDetail';
 
-class Players extends Component {
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-  }
+class Players extends PureComponent {
 
   render() {
     return (

@@ -3,35 +3,46 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "16.2.0",
-    "react-dom": "16.2.0"
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "react-scripts": "3.1.1"
   },
   "devDependencies": {
     "concurrently": "4.1.2",
     "eslint-plugin-react": "7.14.3",
+    "http-proxy-middleware": "0.19.1",
     "json-server": "0.15.0",
     "lodash": "4.17.15",
-    "react-redux": "5.0.6",
-    "react-router": "4.2.0",
-    "react-router-dom": "4.2.2",
-    "react-scripts": "1.0.17",
-    "redux": "3.7.2",
-    "redux-thunk": "2.2.0",
-    "semantic-ui-css": "2.2.12",
-    "semantic-ui-react": "0.77.0",
-    "superagent": "3.6.0",
-    "superagent-jsonp": "0.1.2",
+    "react-redux": "7.1.1",
+    "react-router": "5.0.1",
+    "react-router-dom": "5.0.1",
+    "redux": "4.0.4",
+    "redux-thunk": "2.3.0",
+    "semantic-ui-css": "2.4.1",
+    "semantic-ui-react": "0.88.0",
+    "superagent": "5.1.0",
+    "superagent-jsonp": "0.2.1",
     "superagent-promise": "1.1.0"
   },
-  "proxy": {
-    "/api": {
-      "target": "http://localhost:4001"
-    }
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "scripts": {
     "start": "react-scripts start",
     "test": "react-scripts test --env=jsdom",
     "data": "json-server -p 4001 -w ./data/db.json -r ./data/routes.json -d 800",
     "dev": "yarn concurrently \"yarn data\" \"yarn start\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

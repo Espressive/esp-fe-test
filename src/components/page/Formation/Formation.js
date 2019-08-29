@@ -12,30 +12,23 @@ import FormationRowPlayers    from '../../display/FormationRowPlayers';
 import Position               from '../../../globals/constants/Position';
 import appThunks              from '../../../actions/appThunks';
 
-const propTypes = {
-  loadFormations : PropTypes.func.isRequired,
-  formations     : PropTypes.array,
-};
-const defaultProps = { formations: [] };
 
 class Formation extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { formation: '4-4-2' };
+  static propTypes = {
+    loadFormations : PropTypes.func.isRequired,
+    formations     : PropTypes.array,
+  };
 
-    this.handleFormationSet = this.handleFormationSet.bind(this);
-  }
+  static defaultProps = { formations: [] };
+
+  state = { formation: '4-4-2' }
 
   componentDidMount() {
     this.props.loadFormations();
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-  }
-
-  handleFormationSet(e,data) {
+  handleFormationSet = (e,data) => {
     this.setState({ formation: data.value });
   }
 
@@ -111,9 +104,6 @@ class Formation extends Component {
   }
 
 }
-
-Formation.propTypes = propTypes;
-Formation.defaultProps = defaultProps;
 
 const mapDispatchToProps = (dispatch) => ({
   loadFormations: () => {

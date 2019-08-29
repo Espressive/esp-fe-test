@@ -1,16 +1,12 @@
-import React, { Component } from 'react';
-import { NavLink }          from 'react-router-dom';
+import React, { PureComponent } from 'react';
+import { NavLink }              from 'react-router-dom';
 import {
   Menu,
   Header,
-}                           from 'semantic-ui-react';
-import logo                 from '../../../field.svg';
+}                               from 'semantic-ui-react';
+import logo                     from '../../../field.svg';
 
-class MainMenu extends Component {
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-  }
+class MainMenu extends PureComponent {
 
   render() {
     return (

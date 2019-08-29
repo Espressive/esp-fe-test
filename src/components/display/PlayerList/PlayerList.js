@@ -12,25 +12,21 @@ import {
 }                           from 'semantic-ui-react';
 import appThunks            from '../../../actions/appThunks';
 
-const propTypes = {
-  loadPlayers : PropTypes.func.isRequired,
-  match       : PropTypes.shape({ params: PropTypes.shape({ playerID: PropTypes.string }) }),
-  players     : PropTypes.array,
-};
-
-const defaultProps = {
-  match   : null,
-  players : [],
-};
-
 class PlayerList extends Component {
+
+  static propTypes = {
+    loadPlayers : PropTypes.func.isRequired,
+    match       : PropTypes.shape({ params: PropTypes.shape({ playerID: PropTypes.string }) }),
+    players     : PropTypes.array,
+  };
+
+  static defaultProps = {
+    match   : null,
+    players : [],
+  };
 
   componentDidMount() {
     this.props.loadPlayers();
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
   }
 
   render() {
@@ -87,10 +83,6 @@ class PlayerList extends Component {
   }
 
 }
-
-PlayerList.propTypes = propTypes;
-
-PlayerList.defaultProps = defaultProps;
 
 const mapDispatchToProps = (dispatch) => ({
   loadPlayers: () => {

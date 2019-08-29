@@ -14,40 +14,30 @@ import {
 import defaultImg           from '../../../image.png';
 import Position             from '../../../globals/constants/Position';
 
-const propTypes = {
-  country   : PropTypes.string.isRequired,
-  firstName : PropTypes.string.isRequired,
-  id        : PropTypes.number.isRequired,
-  lastName  : PropTypes.string.isRequired,
-  position  : PropTypes.oneOf(Position).isRequired,
-  className : PropTypes.string,
-  img       : PropTypes.string,
-};
-
-const defaultProps = {
-  img       : null,
-  className : null,
-};
-
 class RowPlayer extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { dimmerActive: false };
+  static propTypes = {
+    country   : PropTypes.string.isRequired,
+    firstName : PropTypes.string.isRequired,
+    id        : PropTypes.number.isRequired,
+    lastName  : PropTypes.string.isRequired,
+    position  : PropTypes.oneOf(Position).isRequired,
+    className : PropTypes.string,
+    img       : PropTypes.string,
+  };
 
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
-    this.handleMouseLeave = this.handleMouseLeave.bind(this);
-  }
+  static defaultProps = {
+    img       : null,
+    className : null,
+  };
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-  }
+  state = { dimmerActive: false };
 
-  handleMouseEnter() {
+  handleMouseEnter = () => {
     this.setState({ dimmerActive: true });
   }
 
-  handleMouseLeave() {
+  handleMouseLeave = () => {
     this.setState({ dimmerActive: false });
   }
 
@@ -122,9 +112,5 @@ class RowPlayer extends Component {
   }
 
 }
-
-RowPlayer.propTypes = propTypes;
-
-RowPlayer.defaultProps = defaultProps;
 
 export default RowPlayer;

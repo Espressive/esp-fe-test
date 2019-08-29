@@ -9,29 +9,20 @@ import {
 
 import PlayerSelectModal    from '../PlayerSelectModal';
 
-const propTypes = { className: PropTypes.string };
-
-const defaultProps = { className: null };
 
 class RowButton extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = { dimmerActive: false };
+  static propTypes = { className: PropTypes.string };
 
-    this.handleMouseEnter = this.handleMouseEnter.bind(this);
-    this.handleMouseLeave = this.handleMouseLeave.bind(this);
-  }
+  static defaultProps = { className: null };
 
-  shouldComponentUpdate(nextProps, nextState) {
-    return true;
-  }
+  state = { dimmerActive: false };
 
-  handleMouseEnter() {
+  handleMouseEnter = () => {
     this.setState({ dimmerActive: true });
   }
 
-  handleMouseLeave() {
+  handleMouseLeave = () => {
     this.setState({ dimmerActive: false });
   }
 
@@ -79,9 +70,5 @@ class RowButton extends Component {
   }
 
 }
-
-RowButton.propTypes = propTypes;
-
-RowButton.defaultProps = defaultProps;
 
 export default RowButton;
