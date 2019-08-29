@@ -3,13 +3,13 @@ import React, {
   Fragment,
 }                    from 'react';
 import {
-  Switch,
   Route,
+  Switch,
 }                    from 'react-router-dom';
 import { Container } from 'semantic-ui-react';
 
-import MainMenu      from './components/display/MainMenu';
 import Formation     from './components/page/Formation';
+import MainMenu      from './components/display/MainMenu';
 import Players       from './components/page/Players';
 
 class App extends Component {

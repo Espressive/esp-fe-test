@@ -40,12 +40,12 @@ class RowButton extends Component {
         onMouseEnter={this.handleMouseEnter}
         onMouseLeave={this.handleMouseLeave}
         style={{
+          backgroundColor : '#fdfdfd',
           borderColor     : '#ccc',
           borderStyle     : 'dashed',
           borderWidth     : '1px',
-          minHeight       : '266px',
-          backgroundColor : '#fdfdfd',
           boxShadow       : 'inset 0 .125em .25em #f0f0f0',
+          minHeight       : '266px',
         }}
         tabIndex={0}
       >

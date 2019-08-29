@@ -6,7 +6,6 @@ import React,
 import PropTypes   from 'prop-types';
 import { connect } from 'react-redux';
 import {
-  Segment,
   Button,
   Dimmer,
   Flag,
@@ -14,6 +13,7 @@ import {
   List,
   Loader,
   Modal,
+  Segment,
 }                  from 'semantic-ui-react';
 
 import appThunks   from '../../../actions/appThunks';

@@ -1,25 +1,25 @@
-import React, { PureComponent } from 'react';
-import PropTypes                from 'prop-types';
+import React, { Component } from 'react';
+import PropTypes            from 'prop-types';
 import {
   Card,
   Grid,
   Transition,
-}                               from 'semantic-ui-react';
-import _                        from 'lodash';
+}                           from 'semantic-ui-react';
+import _                    from 'lodash';
 
-import RowPlayer                from './RowPlayer';
-import RowButton                from './RowButton';
-import Position                 from '../../../globals/constants/Position';
+import RowButton            from './RowButton';
+import RowPlayer            from './RowPlayer';
+import Position             from '../../../globals/constants/Position';
 
 
-class FormationRowPlayers extends PureComponent {
+class FormationRowPlayers extends Component {
 
   static propTypes = {
+    maxPlayers : PropTypes.number,
     players: PropTypes.arrayOf(
       PropTypes.number
     ).isRequired,
     position   : PropTypes.oneOf(Position).isRequired,
-    maxPlayers : PropTypes.number,
   };
 
   static defaultProps = { maxPlayers: 1 };

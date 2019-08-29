@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes            from 'prop-types';
 import {
-  Transition,
   Button,
   Flag,
   Form,
@@ -10,6 +9,7 @@ import {
   Image,
   Label,
   Segment,
+  Transition,
 }                           from 'semantic-ui-react';
 
 
@@ -29,13 +29,13 @@ class PlayerDetail extends Component {
   // TODO: This temporary data needs to be removed and replaced with real
   // player data from /api/v1/players/$playerID
     const player = {
-      id         : 17,
-      first_name : 'First',
-      last_name  : 'Last',
-      country    : 'gb eng',
-      position   : 'MID',
-      img        : '/img/team/17.png',
       bio        : 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque modi nobis tempora et laboriosam enim cum fugiat ab adipisci nostrum quae aliquam, laudantium minus vel repudiandae cupiditate labore, soluta repellendus.',
+      country    : 'gb eng',
+      first_name : 'First',
+      id         : 17,
+      img        : '/img/team/17.png',
+      last_name  : 'Last',
+      position   : 'MID',
     };
 
     // TODO: This temporary data needs to be removed and replaced with real
@@ -43,8 +43,8 @@ class PlayerDetail extends Component {
     const positions = [
       {
         key   : 'MID',
-        value : 'MID',
         text  : 'MID',
+        value : 'MID',
       },
     ];
 

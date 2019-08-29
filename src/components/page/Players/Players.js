@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
 import { Route }                from 'react-router-dom';
 import {
   Grid,
@@ -9,7 +9,7 @@ import {
 import PlayerList               from '../../display/PlayerList';
 import PlayerDetail             from '../../display/PlayerDetail';
 
-class Players extends PureComponent {
+class Players extends Component {
 
   render() {
     return (

@@ -3,9 +3,9 @@ import PropTypes              from 'prop-types';
 import { connect }            from 'react-redux';
 
 import {
+  Dropdown,
   Grid,
   Header,
-  Dropdown,
   Transition,
 }                             from 'semantic-ui-react';
 import FormationRowPlayers    from '../../display/FormationRowPlayers';
@@ -16,8 +16,8 @@ import appThunks              from '../../../actions/appThunks';
 class Formation extends Component {
 
   static propTypes = {
-    loadFormations : PropTypes.func.isRequired,
     formations     : PropTypes.array,
+    loadFormations : PropTypes.func.isRequired,
   };
 
   static defaultProps = { formations: [] };

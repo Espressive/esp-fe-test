@@ -1,12 +1,12 @@
-import React, { PureComponent } from 'react';
-import { NavLink }              from 'react-router-dom';
+import React, { Component } from 'react';
+import { NavLink }          from 'react-router-dom';
 import {
-  Menu,
   Header,
-}                               from 'semantic-ui-react';
-import logo                     from '../../../field.svg';
+  Menu,
+}                           from 'semantic-ui-react';
+import logo                 from '../../../field.svg';
 
-class MainMenu extends PureComponent {
+class MainMenu extends Component {
 
   render() {
     return (
@@ -22,7 +22,7 @@ class MainMenu extends PureComponent {
             content='Team Builder'
             image={
               <img
-                alt='Acme'
+                alt='Team Builder'
                 src={logo}
               />
             }

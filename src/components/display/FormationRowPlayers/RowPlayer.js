@@ -17,18 +17,18 @@ import Position             from '../../../globals/constants/Position';
 class RowPlayer extends Component {
 
   static propTypes = {
+    className : PropTypes.string,
     country   : PropTypes.string.isRequired,
     firstName : PropTypes.string.isRequired,
     id        : PropTypes.number.isRequired,
+    img       : PropTypes.string,
     lastName  : PropTypes.string.isRequired,
     position  : PropTypes.oneOf(Position).isRequired,
-    className : PropTypes.string,
-    img       : PropTypes.string,
   };
 
   static defaultProps = {
-    img       : null,
     className : null,
+    img       : null,
   };
 
   state = { dimmerActive: false };
