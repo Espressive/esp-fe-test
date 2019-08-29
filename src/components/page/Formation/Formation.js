@@ -27,7 +27,7 @@ class Formation extends Component {
     this.handleFormationSet = this.handleFormationSet.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.loadFormations();
   }
 

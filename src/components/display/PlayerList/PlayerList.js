@@ -25,7 +25,7 @@ const defaultProps = {
 
 class PlayerList extends Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.loadPlayers();
   }
 

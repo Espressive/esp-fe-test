@@ -34,7 +34,7 @@ class PlayerSelectModal extends Component {
     this.handleSelect = this.handleSelect.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.loadPlayers();
   }
 
