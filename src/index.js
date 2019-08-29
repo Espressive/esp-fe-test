@@ -9,10 +9,10 @@ import {
 import thunk                  from 'redux-thunk';
 import { Provider }           from 'react-redux';
 
+import 'semantic-ui-css-offline';
+
 import App                    from './App';
 import registerServiceWorker  from './registerServiceWorker';
-import '../node_modules/semantic-ui-css/semantic.min.css';
-
 import reducer                from './reducers';
 
 const emptyState = {};
