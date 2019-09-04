@@ -9,7 +9,7 @@
   ],
   "players": [
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque modi nobis tempora et laboriosam enim cum fugiat ab adipisci nostrum quae aliquam, laudantium minus vel repudiandae cupiditate labore, soluta repellendus.",
+      "bio": "Lorem ipsum dolor sit Jack, consectetur adipisicing elit. Neque modi nobis tempora et laboriosam enim cum fugiat ab adipisci nostrum quae aliquam, laudantium minus vel repudiandae cupiditate labore, soluta repellendus.",
       "country": "gb eng",
       "first_name": "Jack",
       "id": 10,
@@ -18,7 +18,7 @@
       "position": "MID"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore molestiae, totam sequi amet magnam voluptatum consequuntur, ipsam expedita enim, praesentium error dolorem obcaecati cupiditate architecto ex deserunt quidem dicta autem.",
+      "bio": "Lorem ipsum dolor sit Aaron, consectetur adipisicing elit. Tempore molestiae, totam sequi amet magnam voluptatum consequuntur, ipsam expedita enim, praesentium error dolorem obcaecati cupiditate architecto ex deserunt quidem dicta autem.",
       "country": "gb wls",
       "first_name": "Aaron",
       "id": 8,
@@ -27,7 +27,7 @@
       "position": "MID"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni rerum quia impedit non! Accusantium fugit eius, rerum consectetur tempora ducimus, voluptatibus architecto distinctio, maxime magni quod vel cum totam sit.",
+      "bio": "Lorem ipsum dolor sit David, consectetur adipisicing elit. Magni rerum quia impedit non! Accusantium fugit eius, rerum consectetur tempora ducimus, voluptatibus architecto distinctio, maxime magni quod vel cum totam sit.",
       "country": "co",
       "first_name": "David",
       "id": 13,
@@ -36,7 +36,7 @@
       "position": "GOL"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, quasi. Natus officia totam voluptatem, delectus omnis, eligendi culpa voluptas quae hic voluptates molestias nulla aliquam sapiente soluta adipisci! Sed, modi.",
+      "bio": "Lorem ipsum dolor sit Petr, consectetur adipisicing elit. Excepturi, quasi. Natus officia totam voluptatem, delectus omnis, eligendi culpa voluptas quae hic voluptates molestias nulla aliquam sapiente soluta adipisci! Sed, modi.",
       "country": "cr",
       "first_name": "Petr",
       "id": 33,
@@ -45,7 +45,7 @@
       "position": "GOL"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit mollitia quo, neque porro illum! Voluptatem facilis, impedit doloremque eos, labore cum suscipit assumenda sint ad, nostrum odit, ab in animi.",
+      "bio": "Lorem ipsum dolor sit Mathieu, consectetur adipisicing elit. Impedit mollitia quo, neque porro illum! Voluptatem facilis, impedit doloremque eos, labore cum suscipit assumenda sint ad, nostrum odit, ab in animi.",
       "country": "fr",
       "first_name": "Mathieu",
       "id": 2,
@@ -54,7 +54,7 @@
       "position": "DEF"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi, asperiores? Autem dolore minima, reprehenderit repellat fuga nobis ducimus quas? Quos cumque ipsam accusantium facilis ducimus, sint sequi a rerum architecto.",
+      "bio": "Lorem ipsum dolor sit Per, consectetur adipisicing elit. Nisi, asperiores? Autem dolore minima, reprehenderit repellat fuga nobis ducimus quas? Quos cumque ipsam accusantium facilis ducimus, sint sequi a rerum architecto.",
       "country": "de",
       "first_name": "Per",
       "id": 4,
@@ -63,7 +63,7 @@
       "position": "DEF"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis autem nulla a tempore neque quibusdam, recusandae eos officia minima eaque, necessitatibus magni laudantium fugit, alias dignissimos in ea. Incidunt, repellendus.",
+      "bio": "Lorem ipsum dolor sit Laurent, consectetur adipisicing elit. Corporis autem nulla a tempore neque quibusdam, recusandae eos officia minima eaque, necessitatibus magni laudantium fugit, alias dignissimos in ea. Incidunt, repellendus.",
       "country": "fr",
       "first_name": "Laurent",
       "id": 6,
@@ -72,16 +72,16 @@
       "position": "DEF"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium quis sunt atque dolor mollitia laborum omnis, corporis nobis minus quas quisquam dolorem, quasi rem dignissimos culpa ex quibusdam itaque excepturi?",
+      "bio": "Lorem ipsum dolor sit Bobby, consectetur adipisicing elit. Accusantium quis sunt atque dolor mollitia laborum omnis, corporis nobis minus quas quisquam dolorem, quasi rem dignissimos culpa ex quibusdam itaque excepturi?",
       "country": "gb eng",
-      "first_name": "Rob",
+      "first_name": "Bobby",
       "id": 16,
       "img": "/img/team/16.png",
-      "last_name": "Holding",
+      "last_name": "Sacramento",
       "position": "DEF"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi recusandae, temporibus facilis nesciunt explicabo delectus, aperiam error nihil reprehenderit impedit ipsam consequatur quidem voluptates atque maxime obcaecati officiis amet inventore.",
+      "bio": "Lorem ipsum dolor sit Nacho, consectetur adipisicing elit. Animi recusandae, temporibus facilis nesciunt explicabo delectus, aperiam error nihil reprehenderit impedit ipsam consequatur quidem voluptates atque maxime obcaecati officiis amet inventore.",
       "country": "es",
       "first_name": "Nacho",
       "id": 18,
@@ -90,7 +90,7 @@
       "position": "DEF"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, at consequatur, vero alias excepturi eum distinctio, tenetur sunt mollitia hic vel. Eos, debitis, earum! Minima rerum optio incidunt autem dolorum?",
+      "bio": "Lorem ipsum dolor sit Shkodran, consectetur adipisicing elit. Dignissimos, at consequatur, vero alias excepturi eum distinctio, tenetur sunt mollitia hic vel. Eos, debitis, earum! Minima rerum optio incidunt autem dolorum?",
       "country": "de",
       "first_name": "Shkodran",
       "id": 20,
@@ -99,7 +99,7 @@
       "position": "DEF"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati officiis facilis tempora, saepe sint aliquid. Aut rem autem illo soluta inventore fuga quibusdam eaque neque accusamus laboriosam, accusantium in. Autem!",
+      "bio": "Lorem ipsum dolor sit Calum, consectetur adipisicing elit. Obcaecati officiis facilis tempora, saepe sint aliquid. Aut rem autem illo soluta inventore fuga quibusdam eaque neque accusamus laboriosam, accusantium in. Autem!",
       "country": "gb eng",
       "first_name": "Calum",
       "id": 21,
@@ -108,7 +108,7 @@
       "position": "DEF"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt culpa, impedit excepturi nihil quo. Magnam nulla nihil error, temporibus tempora fugiat ullam deleniti doloremque reprehenderit accusamus, velit id autem voluptate.",
+      "bio": "Lorem ipsum dolor sit Hector, consectetur adipisicing elit. Sunt culpa, impedit excepturi nihil quo. Magnam nulla nihil error, temporibus tempora fugiat ullam deleniti doloremque reprehenderit accusamus, velit id autem voluptate.",
       "country": "es",
       "first_name": "Hector",
       "id": 24,
@@ -117,7 +117,7 @@
       "position": "DEF"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta dolor delectus a, quis id harum neque quae modi accusamus minima non alias debitis, nobis repudiandae libero ratione obcaecati facere fuga.",
+      "bio": "Lorem ipsum dolor sit Sead, consectetur adipisicing elit. Soluta dolor delectus a, quis id harum neque quae modi accusamus minima non alias debitis, nobis repudiandae libero ratione obcaecati facere fuga.",
       "country": "ba",
       "first_name": "Sead",
       "id": 31,
@@ -126,7 +126,7 @@
       "position": "DEF"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste fugit doloremque inventore nemo sit unde quas quibusdam enim asperiores excepturi consequuntur reprehenderit quaerat temporibus perspiciatis, accusantium esse delectus distinctio magnam.",
+      "bio": "Lorem ipsum dolor sit Mesut, consectetur adipisicing elit. Iste fugit doloremque inventore nemo sit unde quas quibusdam enim asperiores excepturi consequuntur reprehenderit quaerat temporibus perspiciatis, accusantium esse delectus distinctio magnam.",
       "country": "de",
       "first_name": "Mesut",
       "id": 11,
@@ -135,7 +135,7 @@
       "position": "MID"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis itaque id quia inventore delectus quibusdam quisquam, cumque, qui cupiditate tempore eos libero necessitatibus, eaque repudiandae autem nisi dicta consequatur adipisci?",
+      "bio": "Lorem ipsum dolor sit Santi, consectetur adipisicing elit. Omnis itaque id quia inventore delectus quibusdam quisquam, cumque, qui cupiditate tempore eos libero necessitatibus, eaque repudiandae autem nisi dicta consequatur adipisci?",
       "country": "es",
       "first_name": "Santi",
       "id": 19,
@@ -144,7 +144,7 @@
       "position": "MID"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi veniam rem nesciunt, sapiente recusandae laborum nobis ab eum reprehenderit ducimus, rerum repellat dignissimos, temporibus blanditiis doloribus. Modi dolor maxime officiis.",
+      "bio": "Lorem ipsum dolor sit Granit, consectetur adipisicing elit. Quasi veniam rem nesciunt, sapiente recusandae laborum nobis ab eum reprehenderit ducimus, rerum repellat dignissimos, temporibus blanditiis doloribus. Modi dolor maxime officiis.",
       "country": "ch",
       "first_name": "Granit",
       "id": 29,
@@ -153,7 +153,7 @@
       "position": "MID"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur aperiam voluptatum ab alias quibusdam eos dolorem nihil, ducimus ut maxime cumque expedita veniam, veritatis commodi debitis enim sequi magnam in.",
+      "bio": "Lorem ipsum dolor sit Francis, consectetur adipisicing elit. Tenetur aperiam voluptatum ab alias quibusdam eos dolorem nihil, ducimus ut maxime cumque expedita veniam, veritatis commodi debitis enim sequi magnam in.",
       "country": "fr",
       "first_name": "Francis",
       "id": 34,
@@ -162,7 +162,7 @@
       "position": "MID"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, nam laboriosam. Ex ea ipsum architecto cupiditate cum at molestias repudiandae dolore velit beatae. Nisi vero, nemo enim itaque! Doloremque, deserunt!",
+      "bio": "Lorem ipsum dolor sit Mohamed, consectetur adipisicing elit. Vitae, nam laboriosam. Ex ea ipsum architecto cupiditate cum at molestias repudiandae dolore velit beatae. Nisi vero, nemo enim itaque! Doloremque, deserunt!",
       "country": "eg",
       "first_name": "Mohamed",
       "id": 35,
@@ -171,7 +171,7 @@
       "position": "MID"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur corporis quidem et, reiciendis, deleniti temporibus architecto non asperiores necessitatibus quo cumque, consectetur omnis dignissimos qui molestiae. Tempore nostrum odit ducimus.",
+      "bio": "Lorem ipsum dolor sit Alexis, consectetur adipisicing elit. Tenetur corporis quidem et, reiciendis, deleniti temporibus architecto non asperiores necessitatibus quo cumque, consectetur omnis dignissimos qui molestiae. Tempore nostrum odit ducimus.",
       "country": "cl",
       "first_name": "Alexis",
       "id": 7,
@@ -180,7 +180,7 @@
       "position": "FWD"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias nemo labore beatae assumenda autem consequatur voluptatem illo odit minima aperiam, a officia qui, corporis saepe eveniet numquam impedit tempore, dolores.",
+      "bio": "Lorem ipsum dolor sit Alexandre, consectetur adipisicing elit. Alias nemo labore beatae assumenda autem consequatur voluptatem illo odit minima aperiam, a officia qui, corporis saepe eveniet numquam impedit tempore, dolores.",
       "country": "fr",
       "first_name": "Alexandre",
       "id": 9,
@@ -189,7 +189,7 @@
       "position": "FWD"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit illum quod alias vel ullam unde earum harum quasi sit, voluptatem maxime eligendi veritatis, illo, vitae dolorum similique ut nostrum est!",
+      "bio": "Lorem ipsum dolor sit Olivier, consectetur adipisicing elit. Velit illum quod alias vel ullam unde earum harum quasi sit, voluptatem maxime eligendi veritatis, illo, vitae dolorum similique ut nostrum est!",
       "country": "fr",
       "first_name": "Olivier",
       "id": 12,
@@ -198,7 +198,7 @@
       "position": "FWD"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore voluptate rerum cumque voluptates itaque temporibus modi minus. Pariatur ratione fugit a saepe accusantium, praesentium nam voluptatum, ullam ducimus delectus dolorum.",
+      "bio": "Lorem ipsum dolor sit Theo, consectetur adipisicing elit. Inventore voluptate rerum cumque voluptates itaque temporibus modi minus. Pariatur ratione fugit a saepe accusantium, praesentium nam voluptatum, ullam ducimus delectus dolorum.",
       "country": "gb eng",
       "first_name": "Theo",
       "id": 14,
@@ -207,7 +207,7 @@
       "position": "FWD"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam id deleniti quod. Consequuntur iste repellat facilis ratione, dolore voluptatum quasi alias delectus aliquam culpa consectetur, fuga sed quos repudiandae laboriosam.",
+      "bio": "Lorem ipsum dolor sit Alex, consectetur adipisicing elit. Veniam id deleniti quod. Consequuntur iste repellat facilis ratione, dolore voluptatum quasi alias delectus aliquam culpa consectetur, fuga sed quos repudiandae laboriosam.",
       "country": "ng",
       "first_name": "Alex",
       "id": 17,
@@ -216,7 +216,7 @@
       "position": "FWD"
     },
     {
-      "bio": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quas incidunt non! Aliquid dolorem expedita, consequuntur voluptatibus alias maiores, quo, aperiam qui nemo ut eligendi accusantium praesentium unde esse distinctio?",
+      "bio": "Lorem ipsum dolor sit Danny, consectetur adipisicing elit. Eius quas incidunt non! Aliquid dolorem expedita, consequuntur voluptatibus alias maiores, quo, aperiam qui nemo ut eligendi accusantium praesentium unde esse distinctio?",
       "country": "ng",
       "first_name": "Danny",
       "id": 23,
