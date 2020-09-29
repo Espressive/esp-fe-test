@@ -1,15 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes            from 'prop-types';
-import {
-  Card,
-  Grid,
-  Transition,
-}                           from 'semantic-ui-react';
-import _                    from 'lodash';
+import _ from 'lodash';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {Card, Grid, Transition,} from 'semantic-ui-react';
+import Position from '../../../globals/constants/Position';
 
-import RowButton            from './RowButton';
-import RowPlayer            from './RowPlayer';
-import Position             from '../../../globals/constants/Position';
+import RowButton from './RowButton';
+import RowPlayer from './RowPlayer';
 
 
 class FormationRowPlayers extends Component {
@@ -20,6 +16,9 @@ class FormationRowPlayers extends Component {
       PropTypes.number
     ).isRequired,
     position   : PropTypes.oneOf(Position).isRequired,
+    teamList: PropTypes.arrayOf(
+        PropTypes.object
+    ),
   };
 
   static defaultProps = { maxPlayers: 1 };
@@ -29,6 +28,7 @@ class FormationRowPlayers extends Component {
       maxPlayers,
       players,
       position,
+      teamList
     } = this.props;
 
     return (
@@ -43,20 +43,24 @@ class FormationRowPlayers extends Component {
               itemsPerRow={5}
             >
               {_.times(maxPlayers, (i) =>
-                players[i] ?
-                  <RowPlayer
-                    country={'gb wls'}
-                    firstName={'Aaron'}
-                    id={players[i]}
-                    key={i}
-                    lastName={'Ramsey'}
-                    position={'FWD'}
-                  />
-                  :
-                  <RowButton
-                    key={i}
-                    position={position}
-                  />
+                  {
+                    const id = players[i]
+                    const player = teamList && teamList.filter(element => element.id === id)[0];
+                    return (player && players[i] ?
+                        <RowPlayer
+                            country={player.country}
+                            firstName={player.first_name}
+                            id={players[i]}
+                            key={i}
+                            lastName={player.last_name}
+                            position={player.position}
+                        />
+                        :
+                        <RowButton
+                            key={i}
+                            position={position}
+                        />)
+                  }
               )}
             </Transition.Group>
           }

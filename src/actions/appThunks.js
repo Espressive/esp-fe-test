@@ -30,6 +30,20 @@ const appThunks = {
         // err.message, err.response
       });
   },
+
+    loadTeamSelection: () => dispatch => {
+        request
+            .get(`${API_ENDPOINT}/team_selection`)
+            .then( res => {
+                dispatch({
+                    type: 'ADD_TEAM_SELECTION',
+                    team_selection: res.body
+                })
+            })
+            .catch(err => {
+                console.log(err.message)
+            })
+    }
 };
 
 

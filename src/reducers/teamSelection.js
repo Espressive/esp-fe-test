@@ -1,4 +1,4 @@
-const players = (state = {}, action) => {
+const players = (state = initialState, action) => {
   switch (action.type) {
 
     case 'ADD_TEAM_SELECTION':
@@ -8,5 +8,10 @@ const players = (state = {}, action) => {
 
   }
 };
-
+const initialState = {
+  defenders: [],
+  forwards: [],
+  keeper: [],
+  midfielders: [],
+}
 export default players;

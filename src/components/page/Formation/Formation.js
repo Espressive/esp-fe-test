@@ -1,16 +1,11 @@
-import React, { Component }   from 'react';
-import PropTypes              from 'prop-types';
-import { connect }            from 'react-redux';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
-import {
-  Dropdown,
-  Grid,
-  Header,
-  Transition,
-}                             from 'semantic-ui-react';
-import FormationRowPlayers    from '../../display/FormationRowPlayers';
-import Position               from '../../../globals/constants/Position';
-import appThunks              from '../../../actions/appThunks';
+import {Dropdown, Grid, Header, Transition,} from 'semantic-ui-react';
+import appThunks from '../../../actions/appThunks';
+import Position from '../../../globals/constants/Position';
+import FormationRowPlayers from '../../display/FormationRowPlayers';
 
 
 class Formation extends Component {
@@ -18,6 +13,7 @@ class Formation extends Component {
   static propTypes = {
     formations     : PropTypes.array,
     loadFormations : PropTypes.func.isRequired,
+    loadTeamSelection : PropTypes.func.isRequired,
   };
 
   static defaultProps = { formations: [] };
@@ -26,6 +22,8 @@ class Formation extends Component {
 
   componentDidMount() {
     this.props.loadFormations();
+    this.props.loadTeamSelection();
+    this.props.loadPlayers();
   }
 
   handleFormationSet = (e,data) => {
@@ -33,18 +31,14 @@ class Formation extends Component {
   }
 
   render() {
-    const { formations } = this.props;
+    const { formations, teamSelection, teamList } = this.props;
 
     const formationsOptions = formations.map((f) => ({
       key   : f,
       text  : f,
       value : f,
     })); // Semantic Ui Dropdown requires options formatted with these three values
-
-    const forwards = [null, 9, 24];
-    const midfielders = [11,null,null,19];
-    const defenders = [18,6,null,24];
-    const keeper = [33];
+    const { forwards, midfielders, defenders, keeper } = teamSelection;
 
     const { formation } = this.state;
     const rows = formation.split('-').map(Number);
@@ -77,24 +71,28 @@ class Formation extends Component {
           </Grid.Row>
           {/* NOTE: This is the FWD row */}
           <FormationRowPlayers
+            teamList={teamList}
             maxPlayers={rows[2]}
             players={forwards}
             position={Position[0]}
           />
           {/* NOTE: This is the MID row */}
           <FormationRowPlayers
+            teamList={teamList}
             maxPlayers={rows[1]}
             players={midfielders}
             position={Position[1]}
           />
           {/* NOTE: This is the DEF row */}
           <FormationRowPlayers
+            teamList={teamList}
             maxPlayers={rows[0]}
             players={defenders}
             position={Position[2]}
           />
           {/* NOTE: This is the GOL row */}
           <FormationRowPlayers
+            teamList={teamList}
             players={keeper}
             position={Position[3]}
           />
@@ -109,9 +107,19 @@ const mapDispatchToProps = (dispatch) => ({
   loadFormations: () => {
     dispatch(appThunks.loadFormations());
   },
+  loadPlayers: () => {
+    dispatch(appThunks.loadPlayers())
+  },
+  loadTeamSelection: () => {
+    dispatch(appThunks.loadTeamSelection());
+  }
 });
 
-const mapStateToProps = (state) => ({ formations: state.formations });
+const mapStateToProps = (state) => ({
+  formations: state.formations,
+  teamList: state.players,
+  teamSelection: state.teamSelection,
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Formation);
 
