@@ -1,18 +1,13 @@
-import React, { Component } from 'react';
-import PropTypes            from 'prop-types';
-import { Link }             from 'react-router-dom';
-import {
-  Button,
-  Card,
-  Dimmer,
-  Flag,
-  Icon,
-  Image,
-  Label,
-}                           from 'semantic-ui-react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom';
+import {Button, Card, Dimmer, Flag, Icon, Image, Label,} from 'semantic-ui-react';
+import appThunks from '../../../actions/appThunks';
+import Position from '../../../globals/constants/Position';
 
-import defaultImg           from '../../../image.png';
-import Position             from '../../../globals/constants/Position';
+import defaultImg from '../../../image.png';
+
 
 class RowPlayer extends Component {
 
@@ -69,6 +64,7 @@ class RowPlayer extends Component {
               content='Remove'
               inverted
               size='small'
+              onClick={() => this.remove(this.props.id, this.props.position)}
             />
           </Dimmer>
           <Image
@@ -111,6 +107,19 @@ class RowPlayer extends Component {
     );
   }
 
+  remove = (id, position ) => {
+    this.props.removePlayer(id, position)
+  }
 }
 
-export default RowPlayer;
+const mapDispatchToProps = (dispatch) => ({
+  removePlayer: (id, position) => {
+    dispatch(appThunks.teamSelectionRemovePlayer(id, position));
+  },
+});
+
+const mapStateToProps = (state) => ({
+  teamSelection: state.teamSelection
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(RowPlayer);
