@@ -5,6 +5,8 @@ const players = (state = initialState, action) => {
       return Object.assign({}, state, action.team_selection);
     default:
       return state;
+    case 'REMOVE_PLAYER_TEAM_SELECTION':
+      return state
 
   }
 };

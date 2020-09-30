@@ -58,6 +58,7 @@ class FormationRowPlayers extends Component {
                         :
                         <RowButton
                             key={i}
+                            place={i}
                             position={position}
                         />)
                   }

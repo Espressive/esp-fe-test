@@ -28,6 +28,7 @@ class Formation extends Component {
 
   handleFormationSet = (e,data) => {
     this.setState({ formation: data.value });
+    this.props.limitTeamSelectionRow(data.value);
   }
 
   render() {
@@ -104,6 +105,9 @@ class Formation extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
+  limitTeamSelectionRow: (data) => {
+    dispatch(appThunks.limitTeamSelectionRow(data))
+  },
   loadFormations: () => {
     dispatch(appThunks.loadFormations());
   },
@@ -112,7 +116,7 @@ const mapDispatchToProps = (dispatch) => ({
   },
   loadTeamSelection: () => {
     dispatch(appThunks.loadTeamSelection());
-  }
+  },
 });
 
 const mapStateToProps = (state) => ({
