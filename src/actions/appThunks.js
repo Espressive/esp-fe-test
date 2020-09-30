@@ -4,7 +4,22 @@ import {positionHashMap} from '../globals/constants/Position'
 const API_ENDPOINT = 'http://localhost:4001';
 
 const appThunks = {
-  loadFormations: () => (dispatch) => {
+    addPlayer: (id, position, place) => (dispatch, getState) => {
+        const { teamSelection } = getState()
+        const positions = teamSelection[positionHashMap[position]]
+        positions[place] = id
+        request.post(`${API_ENDPOINT}/team_selection`).send({
+            ...teamSelection,
+            [positionHashMap[position]]: positions,
+        }).then(res => {
+            dispatch({
+                team_selection: res.body,
+                type: 'ADD_TEAM_SELECTION',
+            })
+        }).catch(err => {console.log(err.message)})
+    },
+
+    loadFormations: () => (dispatch) => {
     request
       .get(`${API_ENDPOINT}/api/v1/formations`)
       .then(function (res) {
@@ -48,6 +63,7 @@ const appThunks = {
     },
 
     removePlayer: (id, position) => (dispatch, getState) => {
+        console.log(position)
         const { teamSelection } = getState()
         const positions = teamSelection[positionHashMap[position]]
         request.post(`${API_ENDPOINT}/team_selection`).send({

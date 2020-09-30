@@ -8,7 +8,7 @@ const Position = [
 export const positionHashMap = {
   DEF: 'defenders',
   FWD: 'forwards',
-  GOAL: 'keeper',
+  GOL: 'keeper',
   MID: 'midfielders',
 }
 
