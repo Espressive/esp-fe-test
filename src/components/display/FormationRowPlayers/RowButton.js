@@ -1,13 +1,8 @@
-import React, { Component } from 'react';
-import PropTypes            from 'prop-types';
-import {
-  Button,
-  Card,
-  Dimmer,
-  Modal,
-}                           from 'semantic-ui-react';
+import PropTypes from 'prop-types';
+import React, {Component} from 'react';
+import {Button, Card, Dimmer, Modal,} from 'semantic-ui-react';
 
-import PlayerSelectModal    from '../PlayerSelectModal';
+import PlayerSelectModal from '../PlayerSelectModal';
 
 
 class RowButton extends Component {
@@ -27,10 +22,9 @@ class RowButton extends Component {
   }
 
   render() {
-    const { className } = this.props;
+    const { className, position, place } = this.props;
 
     const { dimmerActive } = this.state;
-
     return (
       <Dimmer.Dimmable
         as={Card}
@@ -61,7 +55,7 @@ class RowButton extends Component {
               />
             }
           >
-            <PlayerSelectModal />
+            <PlayerSelectModal positionRow={position} place={place}/>
           </Modal>
 
         </Dimmer>
