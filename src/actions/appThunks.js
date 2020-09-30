@@ -1,4 +1,5 @@
 import request from 'superagent';
+import {positionHashMap} from '../globals/constants/Position'
 
 const API_ENDPOINT = 'http://localhost:4001';
 
@@ -8,8 +9,8 @@ const appThunks = {
       .get(`${API_ENDPOINT}/api/v1/formations`)
       .then(function (res) {
         dispatch({
-          type       : 'ADD_FORMATIONS',
-          formations : res.body,
+            formations : res.body,
+            type       : 'ADD_FORMATIONS',
         });
       })
       .catch(function(err) {
@@ -22,8 +23,8 @@ const appThunks = {
       .get(`${API_ENDPOINT}/api/v1/players`)
       .then(function (res) {
         dispatch({
-          type    : 'ADD_PLAYERS',
-          players : res.body,
+            players : res.body,
+            type    : 'ADD_PLAYERS',
         });
       })
       .catch(function(err) {
@@ -31,19 +32,34 @@ const appThunks = {
       });
   },
 
+
     loadTeamSelection: () => dispatch => {
         request
             .get(`${API_ENDPOINT}/team_selection`)
             .then( res => {
                 dispatch({
-                    type: 'ADD_TEAM_SELECTION',
-                    team_selection: res.body
+                    team_selection: res.body,
+                    type: 'ADD_TEAM_SELECTION'
                 })
             })
             .catch(err => {
                 console.log(err.message)
             })
-    }
+    },
+
+    removePlayer: (id, position) => (dispatch, getState) => {
+        const { teamSelection } = getState()
+        const positions = teamSelection[positionHashMap[position]]
+        request.post(`${API_ENDPOINT}/team_selection`).send({
+            ...teamSelection,
+            [positionHashMap[position]]: positions.map(player => player !== id ? player : null),
+        }).then(res => {
+            dispatch({
+                team_selection: res.body,
+                type: 'ADD_TEAM_SELECTION',
+            })
+        }).catch(err => {console.log(err.message)})
+    },
 };
 
 
